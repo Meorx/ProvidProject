@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Provid
 //
-//  Created by Hong Ngoc Do on 10/26/19. 
+//  Created by Hong Ngoc Do on 10/26/19.
 //  Copyright © 2019 Hong Ngoc Do. All rights reserved.
 //
 
