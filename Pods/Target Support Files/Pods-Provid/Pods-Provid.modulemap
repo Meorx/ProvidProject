@@ -1,0 +1,6 @@
+module Pods_Provid {
+  umbrella header "Pods-Provid-umbrella.h"
+
+  export *
+  module * { export * }
+}
