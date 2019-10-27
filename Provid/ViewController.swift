@@ -9,6 +9,10 @@
 import UIKit
 import WebKit // possibly for the javascript reference:
 import Photos
+import Cloudinary
+
+let config = CLDConfiguration(cloudName: "steph99rod", apiKey: "678829345134788", apiSecret:"Ko5EN8-LGxd3TZnqmTEKwKtWeSo",  secure: true)
+let cloudinary = CLDCloudinary(configuration: config)
 
 
 class ViewController: UIViewController, UITextFieldDelegate {
@@ -47,9 +51,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // Pick the image
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info:NSDictionary!) {
-        let tempImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        let tempImage = info[UIImagePickerController.InfoKey.originalImage] as! URL
         // this is your image - use it for cloud or wehatever here
-        print(tempImage)
+        //let imageData = tempImage.pngData()
+    
+        cloudinary.createUploader().signedUpload(url: tempImage)
         self.dismiss(animated: true, completion: nil)
     }
 
@@ -75,5 +81,7 @@ self.dismiss(animated: true, completion: nil)// self.performsActionsWhilePresent
         // Do any additional setup after loading the view.
         
     }
+    
+    
     
 }
