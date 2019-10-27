@@ -4,7 +4,9 @@
 target 'Provid' do
   # Comment the next line if you don't want to use dynamic frameworks
   #use_frameworks!
-
+	source 'https://github.com/CocoaPods/Specs.git'
+	platform :ios, '8.0'
+	use_frameworks!
   # Pods for Provid
   pod 'Cloudinary', '~> 2.0'
 
