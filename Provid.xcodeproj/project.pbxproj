@@ -17,6 +17,7 @@
 		7CD709F42364CB4200D2698A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD709F32364CB4200D2698A /* Assets.xcassets */; };
 		7CD709F72364CB4200D2698A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD709F52364CB4200D2698A /* LaunchScreen.storyboard */; };
 		7CD70A022364CB4200D2698A /* ProvidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD70A012364CB4200D2698A /* ProvidTests.swift */; };
+		864F712623653B8F00D735A2 /* AttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864F712523653B8F00D735A2 /* AttachmentHandler.swift */; };
 		8A67BCFD0BAAB85329FA8165 /* libPods-Provid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D9D006797F885005723FC9 /* libPods-Provid.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		7CD709FD2364CB4200D2698A /* ProvidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProvidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD70A012364CB4200D2698A /* ProvidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidTests.swift; sourceTree = "<group>"; };
 		7CD70A032364CB4200D2698A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		864F712523653B8F00D735A2 /* AttachmentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
 		E9135B6EAB9B23F4F705FC65 /* Pods-ProvidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProvidTests.release.xcconfig"; path = "Target Support Files/Pods-ProvidTests/Pods-ProvidTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECBC4240BD8E28114B1C9E23 /* Pods-ProvidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProvidTests.debug.xcconfig"; path = "Target Support Files/Pods-ProvidTests/Pods-ProvidTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 				7CD709F52364CB4200D2698A /* LaunchScreen.storyboard */,
 				7CD709F82364CB4200D2698A /* Info.plist */,
 				7C1F2A4423651D6E00F17837 /* Logo.png */,
+				864F712523653B8F00D735A2 /* AttachmentHandler.swift */,
 			);
 			path = Provid;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CD709EF2364CB3E00D2698A /* ViewController.swift in Sources */,
+				864F712623653B8F00D735A2 /* AttachmentHandler.swift in Sources */,
 				7CD709EB2364CB3E00D2698A /* AppDelegate.swift in Sources */,
 				7CD709ED2364CB3E00D2698A /* SceneDelegate.swift in Sources */,
 			);
