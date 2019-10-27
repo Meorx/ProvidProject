@@ -7,9 +7,14 @@
 //
 
 import UIKit
+// Added for requesting authorization to access photos
+import UserNotifications
+import PushKit
+import CallKit
 
+// Added UNUserNotificationCenterDelegate for requesting authorization
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
