@@ -1,2 +1,2 @@
 # PROVID
-* Provid is a video editing app
+* Provid is an app for editing photos 
