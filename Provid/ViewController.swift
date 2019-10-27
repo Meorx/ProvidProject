@@ -6,6 +6,11 @@
 //  Copyright © 2019 Hong Ngoc Do. All rights reserved.
 //
 
+// THIS IS THE FARTHEST WE GOT TO IMPLEMENTING CLOUDINARY
+// THERE WERE ISSUES WITH UPLOADING IMAGE TO THE WEBSITE
+
+
+
 import UIKit
 import WebKit // possibly for the javascript reference:
 import Photos
