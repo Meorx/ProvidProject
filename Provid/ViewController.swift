@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit // possibly for the javascript reference:
+import Photos
 
 
 class ViewController: UIViewController, UITextFieldDelegate {
@@ -19,26 +20,42 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var imagePicker = UIImagePickerController()
     
-    //@IBOutlet var imagePreview : UIImageView
-
     @IBAction func AddImageButton(UIButton : UIButton) {
-        imagePicker.modalPresentationStyle = UIModalPresentationStyle.currentContext
-        imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-        //self.presentModalViewController(imagePicker, animated: true)
-        self.present(imagePicker, animated: true, completion: nil)
-    
+        
+        let status = PHPhotoLibrary.authorizationStatus()
+
+        //
+        if status == .notDetermined  {
+        PHPhotoLibrary.requestAuthorization({status in
+            })
+        }
+        
+        // Verify the authorization
+        if (status == .authorized) {
+             // Access has been granted.
+            imagePicker.modalPresentationStyle = UIModalPresentationStyle.currentContext
+            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        
+        
+        
     }
+    
+    
+    
+    
+    // Pick the image
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info:NSDictionary!) {
         let tempImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         // this is your image - use it for cloud or wehatever here
         print(tempImage)
         self.dismiss(animated: true, completion: nil)
-        
     }
 
     func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
 
-self.dismiss(animated: true, completion: nil)//        self.performsActionsWhilePresentingModally(true)
+self.dismiss(animated: true, completion: nil)// self.performsActionsWhilePresentingModally(true)
     }
 
     
@@ -59,9 +76,4 @@ self.dismiss(animated: true, completion: nil)//        self.performsActionsWhile
         
     }
     
-    //func readLine(strippingNewline: Bool = true) -> String?
-    
 }
-
-
-
