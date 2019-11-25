@@ -1,2 +1,2 @@
 # PROVID
-* Provid is an app for editing photos 
+* Provid is a simple app for editing photos using Cloudinary services. 
